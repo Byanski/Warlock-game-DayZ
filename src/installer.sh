@@ -44,15 +44,15 @@
 INSTALLER_VERSION="v20260318"
 
 # Name of the game (used to create the directory)
-GAME="GameName"
+GAME="DayZ"
 
-GAME_DESC="Game Dedicated Server"
+GAME_DESC="DayZ Standalone Dedicated Server"
 
 # If your repo URL is github.com/username/repo, then this should be "username/repo" without the "github.com" or "https://"
-REPO="your-github/your-repo"
+REPO="https://github.com/Byanski/Warlock-game-DayZ"
 
 WARLOCK_GUID="replace-with-guid-once-compiled"
-
+STEAM_ID="223350"
 # Set to the username to use for this game.
 # Steam generally recommends using 'steam', but this can be whatever makes sense.
 GAME_USER="steam"
@@ -166,6 +166,8 @@ function install_application() {
 	#	exit 1
 	#fi
 	
+	install_steamcmd
+
 	# Install the management script
 	if ! install_warlock_manager "$REPO" "$BRANCH" "$MANAGER_VERSION"; then
 		log_error "Warlock Manager could not be installed!  Unable to install game"

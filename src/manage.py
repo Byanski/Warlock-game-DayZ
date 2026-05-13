@@ -61,14 +61,14 @@ class GameApp(BaseApp):
 	def __init__(self):
 		super().__init__()
 
-		self.name = 'GameName'
-		self.desc = 'Longer identifier for the game server'
+		self.name = 'DayZ'
+		self.desc = 'DayZ Standalone Dedicated Server'
 		# For steam games, include the steam ID
-		# self.steam_id = '90'
+		self.steam_id = '223350'
 		self.service_handler = GameService
 		# Set this to the class that handles the game mod system, if applicable
 		self.mod_handler = GameMod
-		self.service_prefix = 'your-game-'
+		self.service_prefix = 'dayz-'
 
 		# Use this to mark certain features as disabled in this game manager
 		# self.disabled_features = {'api'}
